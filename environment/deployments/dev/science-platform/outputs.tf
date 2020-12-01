@@ -18,10 +18,10 @@ output "enabled_apis" {
   value       = module.project_factory.enabled_apis
 }
 
-output "budget_name" {
-  description = "The name of the budget if created"
-  value       = module.project_factory.main_budget_name
-}
+# output "budget_name" {
+#   description = "The name of the budget if created"
+#   value       = module.project_factory.main_budget_name
+# }
 
 output "network" {
   value       = module.project_factory.network
