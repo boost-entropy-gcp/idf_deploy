@@ -35,20 +35,20 @@ output "enabled_apis" {
   value       = module.project.enabled_apis
 }
 
-output "main_budget_name" {
-  description = "The name of the budget created by the core project factory module"
-  value       = module.project.budget_name
-}
+# output "main_budget_name" {
+#   description = "The name of the budget created by the core project factory module"
+#   value       = module.project.budget_name
+# }
 
-output "budget_amount" {
-  description = "The amount to use for the budget"
-  value       = var.budget_amount
-}
+# output "budget_amount" {
+#   description = "The amount to use for the budget"
+#   value       = var.budget_amount
+# }
 
-output "budget_alert_spent_percents" {
-  description = "The list of percentages of the budget to alert on"
-  value       = var.budget_alert_spent_percents
-}
+# output "budget_alert_spent_percents" {
+#   description = "The list of percentages of the budget to alert on"
+#   value       = var.budget_alert_spent_percents
+# }
 
 # VPC
 
