@@ -8,7 +8,7 @@ module "project_factory" {
   application_name = var.application_name
   environment      = var.environment
   activate_apis    = var.activate_apis
-  budget_amount    = var.budget_amount
+  #budget_amount    = var.budget_amount
   subnets          = var.subnets
   secondary_ranges = var.secondary_ranges
   routing_mode     = var.routing_mode

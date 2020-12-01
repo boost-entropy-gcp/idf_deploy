@@ -17,7 +17,7 @@ folder_id               = "985686879610"
 network_name            = "custom-vpc"
 org_id                  = "288991023210"
 #project_prefix          = "gke-splatform" # min. 4 characters
-routing_mode            = "GLOBAL"
+routing_mode = "GLOBAL"
 secondary_ranges = {
   "subnet-us-central1-01" : [
     {
