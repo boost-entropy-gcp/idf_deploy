@@ -90,12 +90,12 @@ resource "google_compute_address" "ip_address" {
   region = var.default_region
 }
 
-locals {
-  access_config = {
-    nat_ip       = google_compute_address.ip_address.address
-    network_tier = "PREMIUM"
-  }
-}
+# locals {
+#   access_config = {
+#     nat_ip       = google_compute_address.ip_address.address
+#     network_tier = "PREMIUM"
+#   }
+# }
 
 // Create a Private Instance
 module "vm" {
@@ -103,9 +103,12 @@ module "vm" {
   project_id = module.project_factory.project_id
   subnetwork = data.google_compute_subnetwork.my-subnetwork.self_link
   hostname   = "submit"
-  access_config = [local.access_config]
+  access_config = [{
+    nat_ip = google_compute_address.ip_address.address
+    network_tier = "PREMIUM"
+  }]
 
-  depends_on = [
-    google_compute_address.ip_address
-  ]
+  # depends_on = [
+  #   google_compute_address.ip_address
+  # ]
 }
